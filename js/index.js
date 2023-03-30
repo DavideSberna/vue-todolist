@@ -8,24 +8,30 @@ const { createApp } = Vue
               name: "pane",
               completed: false,
               delete: false,
+              //deleteItem: null,
             },
             {
               name: "carne",
               completed: false,
               delete: false,
+              deleteItem: null,
+              //deleteItem: null,
             },
             {
               name: "frutta",
               completed: false,
               delete: false,
+              //deleteItem: null,
             },
             {
               name: "bibite",
               completed: false,
               delete: false,
+              //deleteItem: false,
             }
         ],
         inputList: '',
+         
          
         
         
@@ -39,6 +45,8 @@ const { createApp } = Vue
             const newList = {
                 name: this.inputList,
                 completed: false,
+                delete: false,
+                deleteItem: false,
             }
             this.list.push(newList)
             this.inputList = ''
@@ -58,8 +66,11 @@ const { createApp } = Vue
              
             if(!this.$refs.listElement[index].classList.contains('text-decoration-line-through')){
                 this.$refs.lista[index].classList.add("bg-danger-subtle")
+                // this.$refs.remove[index].classList.add("d-block")
+                // this.list[index].deleteItem = true
                 this.list[index].delete = true;
                 this.list[index].completed = false;
+
             } else{
                 this.$refs.lista[index].classList.remove("bg-danger-subtle")
                 this.list[index].delete = false;

@@ -1,3 +1,12 @@
 ul li{
     height: 30px;
+    list-style: none;
+}
+
+.list-delete{
+    bottom: -300px;
+    left: 0;
+}
+.list-d-none{
+    display: none;
 }
