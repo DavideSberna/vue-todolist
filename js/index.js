@@ -37,9 +37,9 @@ const { createApp } = Vue
                 completed: false,
             }
             this.list.push(newList)
+            this.inputList = ''
         },
         addDoneItems(index){
-            this.list[index].completed = true;
             if(!this.$refs.lista[index].classList.contains('bg-success-subtle')){
                 this.list[index].completed = true;
             } else{
